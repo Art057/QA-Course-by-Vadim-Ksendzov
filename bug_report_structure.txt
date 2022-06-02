@@ -1,0 +1,13 @@
+Структура баг-репорта
+
+1)Краткое описание проблемы (description)
+2)Продукт (build)
+3)Окружение (environment)
+4)Статус (status)
+5)Приоритет (priority: low, medium, high)
+6)Серьезность (severity: trivial, minor, major, critical, blocker)
+7)Предусловия (preconditions)
+8)Шаги воспроизведения (STR)
+9)Фактический результат (AR)
+10)Ожидаемый результат (ER)
+11)Прикрепленные файлы (attachment: jpg, mp4, txt, chls)

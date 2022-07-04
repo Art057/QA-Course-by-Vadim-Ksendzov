@@ -29,33 +29,93 @@
 
 // Решение 1
 
-// count = 1
-// let a = 2
-// while (count <= 10) {
-//     console.log(Math.pow(a, count));
-//     count++
-// }
+count = 1
+let a = 2
+while (count <= 10) {
+    console.log(Math.pow(a, count));
+    count++
+}
 
 // Решение 1*
 
-// const num = function(degree) {
-//     count = 1
-//     while (degree > 0 && count <= 10) {
-//         console.log(Math.pow(degree, count))
-//         count++
-//     } if (degree === 0) {
-//         console.log("Please enter a number > 0")
-//     }
-// }
+const num = function(degree) {
+    count = 1
+    while (degree > 0 && count <= 10) {
+        console.log(Math.pow(degree, count))
+        count++
+    } if (degree === 0) {
+        console.log("Please enter a number > 0")
+    }
+}
 
-// num(2)
+num(1)
 
 // Решение 2
 
-count = 5
-smile = ":)"
-const mm = [...smile]
-for (let i = 0; i < 10; i++){
-     console.log(smile)
-     count++
+
+let smile = ":)"
+let x = 0
+while (x < 5) {
+    console.log(smile);    
+    smile = smile + ":)";
+    x++;
+} 
+
+// Решение 2*
+
+const printSmile = function (stroka, numberofRows) {
+    let x = 0
+    let string = stroka
+    while (x < numberofRows) {
+    console.log(string);
+    string = string + stroka
+    x++;
 }
+}
+printSmile("Hello! ", 4)
+
+// Решение 3**
+
+const getWordStructure = function (word) {
+    const consonantsArray = ["q","w","r","t","p","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m"];
+    const vovelsArray = ["e","y","u","i","o","a"];
+    let vovels = 0;
+    let consonants = 0;
+    
+    for (let i = 0; i <= word.length; i++) {
+        if (consonantsArray.includes(word.toLowerCase()[i])) {
+            consonants++;
+        }
+        if (vovelsArray.includes(word.toLowerCase()[i])) {
+            vovels++;  }
+    }
+    console.log("Word - ", word, " consists of ", vovels, " vovels, and ", consonants, " consonants");
+}
+
+// Проверки: 'case', 'Case', 'Check-list'
+getWordStructure("case");
+getWordStructure("Case");
+getWordStructure("Check-list");
+getWordStructure("Ararat")
+
+// Решение 4**
+
+
+const isPalindrom = function (word) {
+  const wordToCompare1 = word.toLowerCase();
+  let wordToCompare2 = "";
+  for (let i = wordToCompare1.length; i>0; i--) {
+      wordToCompare2 = wordToCompare2 + wordToCompare1[i-1];
+  }
+  if (wordToCompare1 === wordToCompare2) {
+      console.log("Word ", word, " is palindrom");
+  } else {
+    console.log("Word ", word, " is not palindrom");
+  }
+}
+// Проверки: 'abba', 'Abba'
+isPalindrom("abba");
+isPalindrom("Abba");
+isPalindrom("QwErTyqwe");
+isPalindrom("Artur")
+
